@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Profile — SilverFrame</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-icon"></div>
+
+            <span class="logo-text">
+                SilverFrame
+            </span>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="films.html">
+                    Films
+                </a>
+            </li>
+
+            <li>
+                <a href="lists.html">
+                    Lists
+                </a>
+            </li>
+
+            <li>
+                <a href="members.html">
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="journal.html">
+                    Journal
+                </a>
+            </li>
+
+            <li>
+
+                <button
+                    class="profile-btn"
+                    id="profileBtn"
+                    type="button">
+
+                    <span id="profileInitial">
+                        U
+                    </span>
+
+                </button>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="profile-page">
+
+
+        <!-- PROFILE HEADER -->
+
+        <section class="profile-intro">
+
+            <div class="profile-avatar-large"
+                 id="profileAvatar">
+
+                U
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <h1 id="profileUsername">
+                    Username
+                </h1>
+
+                <p class="profile-handle">
+                    @<span id="profileHandle">
+                        username
+                    </span>
+                </p>
+
+                <p class="profile-bio">
+                    Watching films, collecting stories.
+                </p>
+
+            </div>
+
+
+            <button
+                class="profile-edit"
+                type="button">
+
+                Edit profile
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="profile-stats">
+
+            <div class="profile-stat">
+
+                <strong id="filmsCount">
+                    0
+                </strong>
+
+                <span>
+                    FILMS
+                </span>
+
+            </div>
+
+
+            <div class="profile-stat">
+
+                <strong id="reviewsCount">
+                    0
+                </strong>
+
+                <span>
+                    REVIEWS
+                </span>
+
+            </div>
+
+
+            <div class="profile-stat">
+
+                <strong id="listsCount">
+                    0
+                </strong>
+
+                <span>
+                    LISTS
+                </span>
+
+            </div>
+
+
+            <div class="profile-stat">
+
+                <strong id="likesCount">
+                    0
+                </strong>
+
+                <span>
+                    LIKES
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TOP 4 ================= -->
+
+        <section class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        A FEW FAVORITES
+                    </p>
+
+                    <h2>
+                        Top 4
+                    </h2>
+
+                </div>
+
+                <button class="text-button">
+                    Edit
+                </button>
+
+            </div>
+
+
+            <div class="top-four-grid">
+
+                <div class="top-four-card">
+
+                    <div class="top-four-poster">
+                        <span>1</span>
+                    </div>
+
+                    <p>
+                        Choose a film
+                    </p>
+
+                </div>
+
+
+                <div class="top-four-card">
+
+                    <div class="top-four-poster">
+                        <span>2</span>
+                    </div>
+
+                    <p>
+                        Choose a film
+                    </p>
+
+                </div>
+
+
+                <div class="top-four-card">
+
+                    <div class="top-four-poster">
+                        <span>3</span>
+                    </div>
+
+                    <p>
+                        Choose a film
+                    </p>
+
+                </div>
+
+
+                <div class="top-four-card">
+
+                    <div class="top-four-poster">
+                        <span>4</span>
+                    </div>
+
+                    <p>
+                        Choose a film
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RECENTLY WATCHED ================= -->
+
+        <section class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        RECENT ACTIVITY
+                    </p>
+
+                    <h2>
+                        Recently Watched
+                    </h2>
+
+                </div>
+
+                <a href="films.html"
+                   class="section-link">
+
+                    View all →
+
+                </a>
+
+            </div>
+
+
+            <div
+                class="profile-film-grid"
+                id="recentMovies">
+
+                <div class="empty-film">
+                    No films watched yet.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RECENT REVIEWS ================= -->
+
+        <section class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        YOUR WRITING
+                    </p>
+
+                    <h2>
+                        Recent Reviews
+                    </h2>
+
+                </div>
+
+                <a href="#"
+                   class="section-link">
+
+                    View all →
+
+                </a>
+
+            </div>
+
+
+            <div
+                class="review-list"
+                id="recentReviews">
+
+                <div class="empty-review">
+
+                    You haven't written any reviews yet.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= LIKED ================= -->
+
+        <section class="profile-section">
+
+            <div class="profile-section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        YOUR TASTE
+                    </p>
+
+                    <h2>
+                        Liked Films
+                    </h2>
+
+                </div>
+
+                <a href="#"
+                   class="section-link">
+
+                    View all →
+
+                </a>
+
+            </div>
+
+
+            <div
+                class="profile-film-grid"
+                id="likedMovies">
+
+                <div class="empty-film">
+
+                    No liked films yet.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ACCOUNT ================= -->
+
+        <section class="profile-account">
+
+            <button
+                class="profile-logout"
+                id="logoutBtn"
+                type="button">
+
+                Log out
+
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists — SilverFrame</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo" aria-label="SilverFrame home"><div class="logo-icon"></div><span class="logo-text">SilverFrame</span></a>
+        <ul class="nav-links">
+            <li><a href="films.html">Films</a></li><li><a href="lists.html" aria-current="page">Lists</a></li><li><a href="members.html">Members</a></li><li><a href="journal.html">Journal</a></li>
+            <li><button class="theme-toggle" id="themeBtn" type="button" aria-label="Toggle theme"><img src="contrast_92484.png" alt=""></button></li><li><a href="sign-in.html" class="nav-cta">Sign in</a></li>
+        </ul>
+    </nav>
+    <main class="lists-page"><section class="section lists-section">
+        <div class="lists-hero"><div><p class="section-label">Your collection</p><h1 class="lists-title">Lists</h1><p class="lists-intro">Keep the films that stay with you, all in one place.</p></div><button class="btn-primary create-list-button" id="createListBtn" type="button"><span aria-hidden="true">+</span> Create list</button></div>
+        <div class="collection-summary" aria-label="Collection summary"><div><span id="listCount">0</span><small>lists</small></div><div><span id="savedFilmCount">0</span><small>saved films</small></div></div>
+        <div class="lists-toolbar"><h2>Your shelves</h2><p id="listsStatus" aria-live="polite"></p></div>
+        <div class="lists-grid" id="listsContainer"></div>
+    </section></main>
+    <div class="list-modal" id="listModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="listModalTitle"><div class="list-modal-content"><button class="modal-close" id="closeListModal" type="button" aria-label="Close">&times;</button><p class="section-label">New collection</p><h2 id="listModalTitle">Create a List</h2><form id="createListForm"><label class="sr-only" for="listNameInput">List name</label><input type="text" id="listNameInput" placeholder="e.g. Rainy Sunday films" maxlength="50" required><div class="modal-actions"><button class="btn-secondary" id="cancelListBtn" type="button">Cancel</button><button class="btn-primary" type="submit">Create list</button></div></form></div></div>
+    <script src="script.js"></script>
+</body>
+</html>

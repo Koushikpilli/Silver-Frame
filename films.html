@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Films — SilverFrame</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+      <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon"></div>
+            <span class="logo-text">SilverFrame</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="films.html">Films</a>
+            </li>
+
+            <li>
+                <a href="lists.html">Lists</a>
+            </li>
+
+            <li>
+                <a href="members.html">Members</a>
+            </li>
+
+            <li>
+                <a href="journal.html">Journal</a>
+            </li>
+
+            <li>
+                <button class="theme-toggle" id="themeBtn">
+                    <img
+                        src="contrast_92484.png"
+                        alt="Toggle Theme">
+                </button>
+            </li>
+
+            <!-- SIGN IN BUTTON -->
+
+            <li>
+               <div class="auth-area">
+
+                      <button
+                     class="nav-cta"
+                     id="openLogin"
+                     type="button">
+
+                      Sign in
+                     </button>
+
+
+                           <button
+                            class="profile-btn"
+                            id="profileBtn"
+                               type="button"
+                               style="display: none;">
+                    <span id="profileInitial">U</span>
+
+    </button>
+    <li class="profile-nav-item">
+
+    <button
+        class="profile-btn"
+        id="profileBtn"
+        type="button"
+        aria-label="Open profile">
+
+        <span id="profileInitial">U</span>
+
+    </button>
+
+</li>
+
+                </div>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- FILMS -->
+
+    <main>
+
+        <section class="section films-page">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="section-label">Explore cinema</p>
+                    <h1 class="section-title">Films</h1>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="film-search">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for a film..."
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="film-filters">
+
+                <button class="filter-btn active" data-category="popular">
+                    Popular
+                </button>
+
+                <button class="filter-btn" data-category="top_rated">
+                    Top Rated
+                </button>
+
+                <button class="filter-btn" data-category="now_playing">
+                    Now Playing
+                </button>
+
+                <button class="filter-btn" data-category="upcoming">
+                    Upcoming
+                </button>
+                 <button class="filter-btn" data-category="trending" >
+                    Trending
+                </button>
+
+            </div>
+
+
+            <!-- MOVIES -->
+
+            <div class="movie-grid" id="movieGrid">
+
+                <!-- API movies will appear here -->
+
+            </div>
+
+
+            <!-- LOADING -->
+
+            <p id="loadingText">
+                Loading films...
+            </p>
+
+
+        </section>
+
+    </main>
+
+     <!-- ================= LOGIN MODAL ================= -->
+
+    <div
+        class="login-overlay"
+        id="loginOverlay">
+
+        <div class="login-modal">
+
+            <button
+                class="login-close"
+                id="closeLogin"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+            <p class="login-label">
+                WELCOME BACK
+            </p>
+
+
+            <h2>
+                Sign in to
+                <em>SilverFrame.</em>
+            </h2>
+
+
+            <p class="login-subtitle">
+                Continue your cinematic journey.
+            </p>
+
+
+            <form id="loginForm">
+
+                <input
+                    type="text"
+                    id="loginUsername"
+                    placeholder="Username"
+                    required
+                    autocomplete="username">
+
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                    required
+                    autocomplete="current-password">
+
+
+                <button
+                    type="submit"
+                    class="login-submit">
+
+                    Sign In
+
+                </button>
+
+            </form>
+
+
+            <p id="loginMessage"></p>
+
+
+            <p class="login-register">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create one
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+ 
+  <!-- =====================================================
+     MOVIE DETAILS MODAL
+     ===================================================== -->
+
+<div class="movie-modal-overlay" id="movieModal">
+
+    <div class="movie-modal">
+
+        <button
+            class="movie-modal-close"
+            id="movieModalClose"
+            type="button">
+            &times;
+        </button>
+
+
+        <!-- BACKDROP -->
+
+        <div
+            class="movie-modal-backdrop"
+            id="movieModalBackdrop">
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="movie-modal-content">
+
+            <div class="movie-modal-poster">
+
+                <img
+                    id="movieModalPoster"
+                    src=""
+                    alt="">
+
+            </div>
+
+
+            <div class="movie-modal-info">
+
+                <p
+                    class="movie-modal-label"
+                    id="movieModalLabel">
+                    FILM
+                </p>
+
+
+                <h2 id="movieModalTitle">
+                    Movie Title
+                </h2>
+
+
+                <div
+                    class="movie-modal-meta"
+                    id="movieModalMeta">
+                </div>
+
+
+                <p
+                    class="movie-modal-overview"
+                    id="movieModalOverview">
+                </p>
+
+
+                <!-- ACTIONS -->
+
+                <div class="movie-modal-actions">
+
+                    <button
+                        class="movie-action-btn"
+                        id="addToListBtn"
+                        type="button">
+
+                        + Add to List
+
+                    </button>
+
+
+                    <button
+                        class="movie-action-btn"
+                        id="modalRateBtn"
+                        type="button">
+
+                        ★ Rate
+
+                    </button>
+
+                </div>
+
+
+                <!-- RATING -->
+
+                <div
+                    class="rating-panel"
+                    id="ratingPanel">
+
+                    <p>Rate this film</p>
+
+                    <div class="rating-stars">
+
+                        <button data-rating="1">★</button>
+                        <button data-rating="2">★</button>
+                        <button data-rating="3">★</button>
+                        <button data-rating="4">★</button>
+                        <button data-rating="5">★</button>
+
+                    </div>
+
+                    <span id="ratingValue">
+                        Select a rating
+                    </span>
+
+                </div>
+
+
+                <!-- REVIEWS -->
+
+                <div class="community-reviews">
+
+                    <div class="section-heading">
+
+                        <span>
+                            COMMUNITY
+                        </span>
+
+                        <small>
+                            REVIEWS
+                        </small>
+
+                    </div>
+
+
+                    <div id="movieReviews">
+
+                        <p class="review-loading">
+                            Loading reviews...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SilverFrame</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+         <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon"></div>
+            <span class="logo-text">SilverFrame</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="films.html">Films</a>
+            </li>
+
+            <li>
+                <a href="lists.html">Lists</a>
+            </li>
+
+            <li>
+                <a href="members.html">Members</a>
+            </li>
+
+            <li>
+                <a href="journal.html">Journal</a>
+            </li>
+
+            <li>
+                <button class="theme-toggle" id="themeBtn">
+                    <img
+                        src="contrast_92484.png"
+                        alt="Toggle Theme">
+                </button>
+            </li>
+
+            <!-- SIGN IN BUTTON -->
+
+            <li>
+               <div class="auth-area">
+
+                      <button
+                     class="nav-cta"
+                     id="openLogin"
+                     type="button">
+
+                      Sign in
+                     </button>
+
+
+                           <button
+                            class="profile-btn"
+                            id="profileBtn"
+                               type="button"
+                               style="display: none;">
+                    <span id="profileInitial">U</span>
+
+    </button>
+    <li class="profile-nav-item">
+
+    <button
+        class="profile-btn"
+        id="profileBtn"
+        type="button"
+        aria-label="Open profile">
+
+        <span id="profileInitial">U</span>
+
+    </button>
+
+</li>
+
+                </div>
+            </li>
+
+        </ul>
+
+    </nav>
+<!-- =====================================================
+     SILVERFRAME HERO
+     ===================================================== -->
+
+<section class="hero">
+
+    <div id="heroSlides"></div>
+
+    <div class="hero-overlay"></div>
+
+    <!-- LEFT ARROW -->
+    <button class="hero-arrow hero-prev" id="heroPrev">
+        ❮
+    </button>
+
+    <!-- RIGHT ARROW -->
+    <button class="hero-arrow hero-next" id="heroNext">
+        ❯
+    </button>
+
+    <!-- MOVIE INFORMATION -->
+    <div class="hero-content">
+
+        <p class="hero-eyebrow" id="heroEyebrow">
+            TRENDING THIS WEEK
+        </p>
+
+        <h1 id="heroTitle">
+            Loading...
+        </h1>
+
+        <div class="hero-meta" id="heroMeta"></div>
+
+        <p class="hero-description" id="heroDescription"></p>
+
+    </div>
+
+    <!-- DOTS -->
+    <div class="hero-dots" id="heroDots"></div>
+
+</section>
+    <!-- ================= TRENDING FILMS ================= -->
+
+    <section class="section reveal">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="section-label">
+                    This week
+                </p>
+
+                <h2 class="section-title">
+                    Trending Films
+                </h2>
+
+            </div>
+
+            <a
+                href="films.html"
+                class="section-link">
+
+                View all →
+
+            </a>
+
+        </div>
+
+
+        <div
+            class="movie-grid"
+            id="trendingMovies">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RECENT REVIEWS ================= -->
+
+    <section class="section reviews-section reveal">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="section-label">
+                    From the community
+                </p>
+
+                <h2 class="section-title">
+                    Recent Reviews
+                </h2>
+
+            </div>
+
+            <a
+                href="#"
+                class="section-link">
+
+                More reviews →
+
+            </a>
+
+        </div>
+
+
+        <div class="review-grid">
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="avatar av1">
+                        AK
+                    </div>
+
+                    <div>
+
+                        <p class="review-user-name">
+                            Arjun K.
+                        </p>
+
+                        <p class="review-movie-name">
+                            Blade Runner 2049
+                        </p>
+
+                    </div>
+
+                    <div class="stars">
+
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star-empty">★</span>
+
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    A meditative science fiction poem.
+                    Villeneuve understands that silence can
+                    carry more weight than any explosion ever could.
+                </p>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="avatar av2">
+                        PR
+                    </div>
+
+                    <div>
+
+                        <p class="review-user-name">
+                            Priya R.
+                        </p>
+
+                        <p class="review-movie-name">
+                            In the Mood for Love
+                        </p>
+
+                    </div>
+
+                    <div class="stars">
+
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Every frame is a painting.
+                    Wong Kar-wai makes you feel the weight
+                    of unexpressed emotion through color alone.
+                </p>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="review-header">
+
+                    <div class="avatar av3">
+                        SM
+                    </div>
+
+                    <div>
+
+                        <p class="review-user-name">
+                            Sahil M.
+                        </p>
+
+                        <p class="review-movie-name">
+                            Annihilation
+                        </p>
+
+                    </div>
+
+                    <div class="stars">
+
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star-empty">★</span>
+
+                    </div>
+
+                </div>
+
+                <p class="review-text">
+                    Garland built something genuinely uncanny here.
+                    The kind of film that stays with you for days.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta-section reveal">
+
+        <div class="cta-bg"></div>
+
+        <h2>
+            Your cinematic<br>
+            <em>diary awaits.</em>
+        </h2>
+
+        <p>
+            Join thousands of film lovers tracking every frame,
+            every feeling.
+        </p>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p class="footer-text">
+            © 2025 SilverFrame — A student project
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">GitHub</a>
+
+        </div>
+
+    </footer>
+    
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <div
+        class="login-overlay"
+        id="loginOverlay">
+
+        <div class="login-modal">
+
+            <button
+                class="login-close"
+                id="closeLogin"
+                type="button">
+
+                &times;
+
+            </button>
+
+
+            <p class="login-label">
+                WELCOME BACK
+            </p>
+
+
+            <h2>
+                Sign in to
+                <em>SilverFrame.</em>
+            </h2>
+
+
+            <p class="login-subtitle">
+                Continue your cinematic journey.
+            </p>
+
+
+            <form id="loginForm">
+
+                <input
+                    type="text"
+                    id="loginUsername"
+                    placeholder="Username"
+                    required
+                    autocomplete="username">
+
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                    required
+                    autocomplete="current-password">
+
+
+                <button
+                    type="submit"
+                    class="login-submit">
+
+                    Sign In
+
+                </button>
+
+            </form>
+
+
+            <p id="loginMessage"></p>
+
+
+            <p class="login-register">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create one
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+  
+  
+
+    <!-- =====================================================
+     MOVIE DETAILS MODAL
+     ===================================================== -->
+
+<div class="movie-modal-overlay" id="movieModal">
+
+    <div class="movie-modal">
+
+        <button
+            class="movie-modal-close"
+            id="movieModalClose"
+            type="button">
+            &times;
+        </button>
+
+
+        <!-- BACKDROP -->
+
+        <div
+            class="movie-modal-backdrop"
+            id="movieModalBackdrop">
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="movie-modal-content">
+
+            <div class="movie-modal-poster">
+
+                <img
+                    id="movieModalPoster"
+                    src=""
+                    alt="">
+
+            </div>
+
+
+            <div class="movie-modal-info">
+
+                <p
+                    class="movie-modal-label"
+                    id="movieModalLabel">
+                    FILM
+                </p>
+
+
+                <h2 id="movieModalTitle">
+                    Movie Title
+                </h2>
+
+
+                <div
+                    class="movie-modal-meta"
+                    id="movieModalMeta">
+                </div>
+
+
+                <p
+                    class="movie-modal-overview"
+                    id="movieModalOverview">
+                </p>
+
+
+                <!-- ACTIONS -->
+
+                <div class="movie-modal-actions">
+
+                    <button
+                        class="movie-action-btn"
+                        id="addToListBtn"
+                        type="button">
+
+                        + Add to List
+
+                    </button>
+
+
+                    <button
+                        class="movie-action-btn"
+                        id="modalRateBtn"
+                        type="button">
+
+                        ★ Rate
+
+                    </button>
+
+                </div>
+
+
+                <!-- RATING -->
+
+                <div
+                    class="rating-panel"
+                    id="ratingPanel">
+
+                    <p>Rate this film</p>
+
+                    <div class="rating-stars">
+
+                        <button data-rating="1">★</button>
+                        <button data-rating="2">★</button>
+                        <button data-rating="3">★</button>
+                        <button data-rating="4">★</button>
+                        <button data-rating="5">★</button>
+
+                    </div>
+
+                    <span id="ratingValue">
+                        Select a rating
+                    </span>
+
+                </div>
+
+
+                <!-- REVIEWS -->
+
+                <div class="community-reviews">
+
+                    <div class="section-heading">
+
+                        <span>
+                            COMMUNITY
+                        </span>
+
+                        <small>
+                            REVIEWS
+                        </small>
+
+                    </div>
+
+
+                    <div id="movieReviews">
+
+                        <p class="review-loading">
+                            Loading reviews...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
